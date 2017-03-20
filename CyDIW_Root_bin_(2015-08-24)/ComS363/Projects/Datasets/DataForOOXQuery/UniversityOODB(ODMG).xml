@@ -609,7 +609,7 @@
 		<ISA oType="PersonType" oID="p201586985"/>
 		<Salary>120000</Salary>
 		<Rank>Professor</Rank>
-		<Mentoring oID="s118784412 s164500920 s164776911 s387215322 s432180765 s483727101 s722131306 s895255243 s901511548" oType="StudentType"/>
+		<Mentoring oType="StudentType" oID="s118784412 s164500920 s164776911 s387215322 s432180765 s483727101 s722131306 s895255243 s901511548"/>
 		<Instructing oType="OfferingType" oID="Offering001 Offering002"/>
 	</Faculty>
 	<Faculty FacultyID="f386167477">
@@ -631,14 +631,14 @@
 		<Salary>88000</Salary>
 		<Rank>Instructor</Rank>
 		<Mentoring oType="StudentType" oID="s222105935 s419180204 s449976666 s644488789 s664353912 s750913239 s905922853 s909334701 s973071948"/>
-		<Instructing oType="OfferingType" />
+		<Instructing oType="OfferingType" oID="Offering016"/>
 </Faculty>
 	<Faculty FacultyID="f555010131">
 		<ISA oType="PersonType" oID="p555010131"/>
 		<Salary>120000</Salary>
 		<Rank>Professor</Rank>
 		<Mentoring oType="StudentType" oID="s212976207 s262891588 s363200537 s466094162 s483223789 s485619193 s712524758 s831142613 s862952924 s907425648"/>
-		<Instructing oType="OfferingType" />
+		<Instructing oType="OfferingType" oID="Offering017"/>
 </Faculty>
 	<Faculty FacultyID="f685744439">
 		<ISA oType="PersonType" oID="p685744439"/>
@@ -1454,7 +1454,7 @@
 	<Course CourseID="c0722">
 		<CourseCode>CS227</CourseCode>
 		<CourseName>Introduction to C++</CourseName>
-		<PreReqs oType="CourseType" />
+		<PreReqs oType="CourseType" oID="c0822"/>
 		<OfferedAs oType="OfferingType" oID="Offering001"/>
 	</Course>
 	<Course CourseID="c0822">
@@ -1522,6 +1522,18 @@
 		<CourseName>Advanced Design and Analysis of Algorithms</CourseName>
 		<PreReqs oType="CourseType" oID="c0113"/>
 		<OfferedAs oType="OfferingType" oID="Offering015"/>
+	</Course>
+	<Course CourseID="c0815">
+		<CourseCode>CS518</CourseCode>
+		<CourseName>Introduction to Computational Geometry</CourseName>
+		<PreReqs oType="CourseType" oID="c0113"/>
+		<OfferedAs oType="OfferingType" oID="Offering016"/>
+	</Course>
+		<Course CourseID="c0135">
+		<CourseCode>CS531</CourseCode>
+		<CourseName>Theory of Computation</CourseName>
+		<PreReqs oType="CourseType" oID="c0133"/>
+		<OfferedAs oType="OfferingType" oID="Offering017"/>
 	</Course>
 	<Offering OfferingID="Offering001">
 		<CourseInfo oType="CourseType" oID="c0722"/>
@@ -1612,6 +1624,18 @@
 		<Section>2</Section>
 		<Instructor oType="FacultyType" oID="f997111094"/>
 		<Enrollments oType="EnrollmentType" oID="Enrollment304 Enrollment305 Enrollment306 Enrollment307 Enrollment308 Enrollment309 Enrollment310 Enrollment311 Enrollment312 Enrollment313 Enrollment314 Enrollment315 Enrollment316 Enrollment317 Enrollment318 Enrollment319 Enrollment320 Enrollment321"/>
+	</Offering>
+	<Offering OfferingID="Offering016">
+		<CourseInfo oType="CourseType" oID="c0815"/>
+		<Section>1</Section>
+		<Instructor oType="FacultyType" oID="f466388906"/>
+		<Enrollments oType="EnrollmentType" oID="Enrollment323"/>
+	</Offering>
+	<Offering OfferingID="Offering017">
+		<CourseInfo oType="CourseType" oID="c0135"/>
+		<Section>1</Section>
+		<Instructor oType="FacultyType" oID="f555010131"/>
+		<Enrollments oType="EnrollmentType" oID="Enrollment324"/>
 	</Offering>
 	<Enrollment EnrollmentID="Enrollment002">
 		<OfferingInfo oType="OfferingType" oID="Offering001"/>
@@ -3215,6 +3239,16 @@
 	</Enrollment>
 	<Enrollment EnrollmentID="Enrollment322">
 		<OfferingInfo oType="OfferingType" oID="Offering005"/>
+		<StudentInfo oType="StudentType" oID="s480293439"/>
+		<Grade>A</Grade>
+	</Enrollment>
+		<Enrollment EnrollmentID="Enrollment323">
+		<OfferingInfo oType="OfferingType" oID="Offering016"/>
+		<StudentInfo oType="StudentType" oID="s480293439"/>
+		<Grade>A</Grade>
+	</Enrollment>
+		<Enrollment EnrollmentID="Enrollment324">
+		<OfferingInfo oType="OfferingType" oID="Offering017"/>
 		<StudentInfo oType="StudentType" oID="s480293439"/>
 		<Grade>A</Grade>
 	</Enrollment>

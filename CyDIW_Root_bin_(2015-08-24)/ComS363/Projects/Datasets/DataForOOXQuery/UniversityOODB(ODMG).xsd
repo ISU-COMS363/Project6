@@ -44,7 +44,7 @@
 			<xs:element name="Instructing">
 				<xs:complexType>
 					<xs:attribute name="oType" type="xs:string" use="required" fixed="OfferingType"/>
-					<xs:attribute name="oID" type="xs:IDREFS" use="optional"/>
+					<xs:attribute name="oID" type="xs:IDREFS" use="required"/>
 				</xs:complexType>
 			</xs:element>
 		</xs:sequence>
@@ -86,7 +86,7 @@
 				</xs:annotation>
 				<xs:complexType>
 					<xs:attribute name="oType" type="xs:string" use="required" fixed="CourseType"/>
-					<xs:attribute name="oID" type="xs:IDREFS" use="optional"/>
+					<xs:attribute name="oID" type="xs:IDREFS" use="required"/>
 				</xs:complexType>
 			</xs:element>
 			<xs:element name="OfferedAs">

@@ -62,3 +62,57 @@ let $students := doc("ComS363/Projects/Datasets/DataForXQuery/Student.xml")//Stu
 return <Classification>{$c, <Students>{$students}</Students>}</Classification>
 } </NS>;
 </showtext>
+
+// Part 2;
+
+// Item 7;
+<showtext>
+$OOXQuery:>
+<Item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> {
+for $f in doc("ComS363/Projects/Datasets/DataForOOXQuery/UniversityOODB(ODMG).xml")//Faculty[Salary>=100000]
+return <Faculty>{$f.Name, $f.Rank}</Faculty>
+} </Item>;
+</showtext>
+
+// Item 8;
+<showtext>
+$OOXQuery:>
+<Item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> {
+for $s in doc("ComS363/Projects/Datasets/DataForOOXQuery/UniversityOODB(ODMG).xml")//Student
+return <StudentAndMentor>{$s.Name, <MentorName>{$s.Mentor.Name}</MentorName>}</StudentAndMentor>
+} </Item>;
+</showtext>
+
+// Item 9;
+<showtext>
+$OOXQuery:>
+<Item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> {
+for $f in doc("ComS363/Projects/Datasets/DataForOOXQuery/UniversityOODB(ODMG).xml")//Faculty
+let $students := $f.Mentoring
+return <Mentor>
+{$f.Name}
+<Students>
+{
+for $s in $students
+return <Student>{$s.Classification, $s.GPA}</Student>
+}
+</Students>
+</Mentor>
+} </Item>;
+</showtext>
+
+// Item 10;
+<showtext>
+$OOXQuery:>
+<Item xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"> {
+for $o in doc("ComS363/Projects/Datasets/DataForOOXQuery/UniversityOODB(ODMG).xml")//Offering
+let $info := $o.CourseInfo
+return <Offering>
+{$info.CourseName, $o.Section, $o.Instructor.Name}
+<Enrollment>
+{for $e in $o.Enrollments
+return <Enrollment>{$e}</Enrollment>}
+</Enrollment>
+</Offering>
+} </Item>;
+</showtext>
