@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<AllCourses>
+<Courses>
   <Course>
     <CourseCode>CS227</CourseCode>
     <CourseName>Introduction to C++</CourseName>
@@ -70,4 +70,4 @@
     <CourseName>Advanced Design and Analysis of Algorithms</CourseName>
     <PreReq>CS311</PreReq>
   </Course>
-</AllCourses>
+</Courses>

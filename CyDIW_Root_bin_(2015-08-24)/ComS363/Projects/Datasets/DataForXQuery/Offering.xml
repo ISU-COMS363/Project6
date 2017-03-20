@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<AllOfferings>
+<Offerings>
   <Offering>
     <CourseCode>CS227</CourseCode>
     <SectionNo>1</SectionNo>
@@ -75,4 +75,4 @@
     <SectionNo>2</SectionNo>
     <InstructorID>997111094</InstructorID>
   </Offering>
-</AllOfferings>
+</Offerings>

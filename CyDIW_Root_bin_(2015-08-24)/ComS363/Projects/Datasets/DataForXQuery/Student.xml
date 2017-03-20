@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!-- edited with XMLSPY v5 rel. 3 U (http://www.xmlspy.com) by Shashi K Gadia (Iowa State University, Computer Science) -->
-<AllStudents>
+<Students>
   <Student>
     <StudentID>118784412</StudentID>
     <Classification>Sophomore</Classification>
@@ -701,4 +701,4 @@
     <MentorID>463249547</MentorID>
     <CreditHours>48</CreditHours>
   </Student>
-</AllStudents>
+</Students>

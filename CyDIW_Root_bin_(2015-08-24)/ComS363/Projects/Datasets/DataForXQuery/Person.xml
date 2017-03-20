@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<AllPersons>
+<Persons>
   <Person>
     <Name>Wee Fletcher</Name>
     <ID>115423723</ID>
@@ -720,4 +720,4 @@
     <Address>456 Ontario</Address>
     <DOB>1974-07-19T00:00:00.0000000-05:00</DOB>
   </Person>
-</AllPersons>
+</Persons>

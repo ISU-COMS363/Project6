@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8" ?>
-<AllEnrollments>
+<Enrollments>
   <Enrollment>
     <CourseCode>CS227</CourseCode>
     <SectionNo>1</SectionNo>
@@ -2004,4 +2004,4 @@
     <StudentID>996056608</StudentID>
     <Grade>A-</Grade>
   </Enrollment>
-</AllEnrollments>
+</Enrollments>
