@@ -1,0 +1,64 @@
+// Part 1;
+
+// Item 1;
+<showtext>
+$Saxon:>
+<NS> {
+for $s in doc("Part1/Datasets/Student.xml")//Student
+for $p in doc("Part1/Datasets/Person.xml")//Person[ID=$s/StudentID]
+for $p2 in doc("Part1/Datasets/Person.xml")//Person[ID=$s/MentorID]
+return <E> {$p/Name, <Mentor>{$p2/Name}</Mentor>} </E>
+} </NS>;
+</showtext>
+
+// Item 2;
+<showtext>
+$Saxon:>
+<NS> {
+for $c in distinct-values(doc("Part1/Datasets/Student.xml")/Students/Student/Classification)
+let $s1 := doc("Part1/Datasets/Student.xml")/Students/Student[Classification=$c]/GPA
+let $s2 := count(doc("Part1/Datasets/Student.xml")//Student[Classification=$c])
+return <E> {$c, <AvgGPA>{sum($s1) div $s2}</AvgGPA>} </E>
+} </NS>;
+</showtext>
+
+// Item 3;
+<showtext>
+$Saxon:>
+<NS> {
+for $sID in distinct-values(doc("Part1/Datasets/Enrollment.xml")//Enrollment/StudentID)
+for $s in doc("Part1/Datasets/Student.xml")//Student[StudentID=$sID]
+for $p in doc("Part1/Datasets/Person.xml")//Person[ID=$s/StudentID]
+for $p2 in doc("Part1/Datasets/Person.xml")//Person[ID=$s/MentorID]
+return <E>{$p/Name, <Mentor>{$p2/Name}</Mentor>}</E>
+} </NS>;
+</showtext>
+
+// Item 4;
+<showtext>
+$Saxon:>
+<NS> {
+for $sID in distinct-values(doc("Part1/Datasets/Enrollment.xml")//Enrollment[Grade="A"]/StudentID)
+let $name := doc("Part1/Datasets/Person.xml")//Person[ID=$sID]/Name
+return <E> {$name} </E>
+} </NS>;
+</showtext>
+
+// Item 5;
+<showtext>
+$Saxon:>
+<NS> {
+for $code in distinct-values(doc("Part1/Datasets/Course.xml")//Course[CourseCode="CS311"]/PreReq)
+return <E> {$code} </E>
+} </NS>;
+</showtext>
+
+// Item 6;
+<showtext>
+$Saxon:>
+<NS> {
+for $c in distinct-values(doc("Part1/Datasets/Student.xml")/Students/Student/Classification)
+let $students := doc("Part1/Datasets/Student.xml")//Student[Classification=$c]
+return <Classification>{$c, <Students>{$students}</Students>}</Classification>
+} </NS>;
+</showtext>
