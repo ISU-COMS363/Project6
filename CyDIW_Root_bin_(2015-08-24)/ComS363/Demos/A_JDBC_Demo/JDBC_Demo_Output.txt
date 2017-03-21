@@ -1,4 +1,0 @@
-*** Connected to the database ***
-SQLException: Table 'db363demo.Emp' doesn't exist
-SQLState: 42S02
-VendorError: 1146
